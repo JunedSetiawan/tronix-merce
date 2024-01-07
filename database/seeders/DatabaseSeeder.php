@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\ProductBrand;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -14,12 +15,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::factory(10)->create();
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Admin',
+        //     'email' => 'user@example.com',
+        // ]);
 
-        \App\Models\User::create([
-            'name' => 'User',
-            'email' => 'user@example.com',
-            'password' => Hash::make('password')
-        ]);
+        $this->call([
+            ProductCategory::class,
+            ProductBrandSeeder::class,
+            RolePermissionSeeder::class,
+            UserSeeder::class,
+            ProductSeeder::class,
+            DiscountSeeder::class,
+        ]); // add this line
+
     }
 }

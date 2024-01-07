@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('product_id')->references('id')->on('products')
                 ->onDelete('cascade'); // cascade means if product is deleted, delete all its discounts (product discounts
-            $table->unsignedBigInteger('percentage');
+            $table->unsignedBigInteger('value');
             $table->date('start_date');
             $table->date('end_date');
             $table->enum('status', ['active', 'inactive'])->default('active');

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('order_number')->unique();
             $table->foreignId('buyer_id')->references('id')->on('users')
                 ->onDelete('cascade'); // cascade means if user is deleted, delete all his orders (user orders
             $table->foreignId('product_id')->references('id')->on('products')->onDelete('cascade'); // cascade means if product is deleted, delete all its orders (order items

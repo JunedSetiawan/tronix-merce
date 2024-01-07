@@ -1,0 +1,121 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class ProductBrandSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $brands = [
+            'Apple',
+            'Samsung',
+            'Huawei',
+            'Xiaomi',
+            'Oppo',
+            'Vivo',
+            'Realme',
+            'OnePlus',
+            'Asus',
+            'Lenovo',
+            'Sony',
+            'Nokia',
+            'LG',
+            'HTC',
+            'Motorola',
+            'Google',
+            'BlackBerry',
+            'Alcatel',
+            'ZTE',
+            'Microsoft',
+            'Vodafone',
+            'T-Mobile',
+            'Acer',
+            'HP',
+            'Asus',
+            'Dell',
+            'Toshiba',
+            'Panasonic',
+            'Micromax',
+            'Intex',
+            'Lava',
+            'Gionee',
+            'Black Shark',
+            'Meizu',
+            'YU',
+            'Vertu',
+            'Infinix',
+            '10.or',
+            'Coolpad',
+            'LeEco',
+            'Xolo',
+            'iBall',
+            'Swipe',
+            'Videocon',
+            'Jolla',
+            'Celkon',
+            'Itel',
+            'iKall',
+            'iVooMi',
+            'Karbonn',
+            'Lemon',
+            'Lyf',
+            'M-tech',
+            'Mafe',
+            'Maxx',
+            'Nubia',
+            'Obi',
+            'Onida',
+            'Rage',
+            'Sansui',
+            'Spice',
+            'Tecno',
+            'Ulefone',
+            'UmiDigi',
+            'Xccess',
+            'Xiaomi',
+            'Xolo',
+            'Ziox',
+            'Zopo',
+            'Zync',
+            'Adcom',
+            'Aqua',
+            'Blu',
+            'BQ',
+            'Brandsdaddy',
+            'Chilli',
+            'Cubot',
+            'Datawind',
+            'Doogee',
+            'Elephone',
+            'Fly',
+            'Forme',
+            'Gfive',
+            'Good One',
+            'Greenberry',
+            'Hi-Tech',
+            'HPL',
+            'HSL',
+            'Hyve',
+            'I-Smart',
+            'Idea',
+            'InFocus',
+            'Innjoo',
+            'Inovu',
+            'iOcean',
+            'iTel',
+        ];
+
+        foreach ($brands as $brand) {
+            \App\Models\ProductBrand::create([
+                'name' => $brand,
+                'slug' => \Illuminate\Support\Str::slug($brand),
+            ]);
+        }
+    }
+}

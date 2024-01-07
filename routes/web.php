@@ -33,7 +33,6 @@ Route::middleware('splade')->group(function () {
     });
 
     Route::middleware('auth')->group(function () {
-        Route::get('testing-table', [UserController::class, 'index'])->name('test.table');
         Route::get('/dashboard', function () {
             return view('dashboard');
         })->middleware(['verified'])->name('dashboard');
@@ -43,6 +42,5 @@ Route::middleware('splade')->group(function () {
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 
-    require __DIR__ . '/documentation.php';
     require __DIR__ . '/auth.php';
 });

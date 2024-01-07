@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('product_categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->references('id')->on('products')
-                ->onDelete('cascade'); // cascade means if product is deleted, delete all its categories (product categories
             $table->string('name');
             $table->string('slug');
             $table->timestamps();
