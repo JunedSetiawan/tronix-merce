@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')
                 ->onDelete('cascade'); // cascade means if user is deleted, delete all his addresses (user addresses
+            $table->string('address');
             $table->string('country');
             $table->string('city');
             $table->string('street');
-            $table->string('zip_code');
             $table->timestamps();
         });
     }

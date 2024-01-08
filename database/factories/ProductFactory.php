@@ -22,13 +22,14 @@ class ProductFactory extends Factory
             'description' => fake()->sentence(),
             'price' => fake()->numberBetween(200000, 5000000),
             'category_id' => function () {
-                return \App\Models\ProductCategory::all()->random()->id;
+                return \App\Models\Category::all()->random()->id;
             },
             'brand_id' => function () {
-                return \App\Models\ProductBrand::all()->random()->id;
+                return \App\Models\Brand::all()->random()->id;
             },
             'stock' => fake()->numberBetween(1, 100),
             'image' => fake()->imageUrl(),
+            'production_date' => fake()->dateTimeBetween('-5 years', 'now'),
         ];
     }
 }

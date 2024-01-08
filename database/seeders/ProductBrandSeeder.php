@@ -112,7 +112,7 @@ class ProductBrandSeeder extends Seeder
         ];
 
         foreach ($brands as $brand) {
-            \App\Models\ProductBrand::create([
+            \App\Models\Brand::create([
                 'name' => $brand,
                 'slug' => \Illuminate\Support\Str::slug($brand),
             ]);

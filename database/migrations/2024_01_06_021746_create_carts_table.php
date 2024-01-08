@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignId('product_id')->references('id')->on('products')
                 ->onDelete('cascade'); // cascade means if product is deleted, delete all its carts (cart items
             $table->unsignedBigInteger('quantity');
-            $table->unsignedBigInteger('total');
             $table->timestamps();
         });
     }

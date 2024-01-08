@@ -34,7 +34,7 @@ class ProductCategory extends Seeder
         ];
 
         foreach ($categories as $category) {
-            \App\Models\ProductCategory::create([
+            \App\Models\Category::create([
                 'name' => $category,
                 'slug' => \Illuminate\Support\Str::slug($category),
             ]);

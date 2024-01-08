@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('order_number')->unique();
             $table->foreignId('buyer_id')->references('id')->on('users')
                 ->onDelete('cascade'); // cascade means if user is deleted, delete all his orders (user orders
-            $table->foreignId('product_id')->references('id')->on('products')->onDelete('cascade'); // cascade means if product is deleted, delete all its orders (order items
             $table->date('order_date');
             $table->unsignedBigInteger('total_price');
             $table->enum('status', ['pending', 'processing', 'completed', 'declined', 'canceled']);

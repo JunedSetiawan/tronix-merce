@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Product;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -133,7 +134,7 @@ class ProductSeeder extends Seeder
         ];
 
         foreach ($products as $product) {
-            \App\Models\Product::factory()->create($product);
+            Product::factory()->create($product);
         }
     }
 }
