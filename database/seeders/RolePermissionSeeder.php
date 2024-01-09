@@ -52,7 +52,7 @@ class RolePermissionSeeder extends Seeder
 
         $roles = [
             'admin',
-            'user',
+            'customer',
         ];
 
         foreach ($roles as $role) {
@@ -67,9 +67,9 @@ class RolePermissionSeeder extends Seeder
 
         $admin->givePermissionTo(\App\Models\Permission::all());
 
-        $user = \App\Models\Role::where('name', 'user')->first();
+        $customer = \App\Models\Role::where('name', 'customer')->first();
 
-        $user->givePermissionTo([
+        $customer->givePermissionTo([
             'view products',
             'view discounts',
             'view orders',

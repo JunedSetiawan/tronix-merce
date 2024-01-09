@@ -12,14 +12,6 @@ class Product extends Model
 
     protected  $fillable = ['name', 'description', 'price', 'image', 'stock', 'category_id', 'brand_id', 'production_date'];
 
-    protected static function boot()
-    {
-        parent::boot();
-        static::creating(function ($product) {
-            $product->slug = Str::slug($product->name);
-        });
-    }
-
     public function category()
     {
         return $this->belongsTo(Category::class);
