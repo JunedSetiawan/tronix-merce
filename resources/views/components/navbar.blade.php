@@ -20,7 +20,7 @@
         <!-- Header -->
         <header class="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5">
             <a href="index.html">
-                <img class="cursor-pointer sm:h-auto sm:w-auto" src="./assets/images/company-logo.svg" alt="company logo" />
+                <h1 class="font-mono text-3xl font-bold">Tech Tronix</h1>
             </a>
 
             <div class="md:hidden">
@@ -198,8 +198,8 @@
                 <div class="w-[300px] border-r">
                     <ul class="px-5">
                         <li class="active:blue-900 flex items-center gap-2 bg-amber-400 py-2 px-3 active:bg-amber-400">
-                            <img width="15px" height="15px" src="./assets/images/bed.svg" alt="Bedroom icon" />
-                            Bedroom
+                            <x-heroicon-o-device-phone-mobile class="w-5 h-5" />
+                            SmartPhone
                             <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -209,8 +209,8 @@
 
                         <li
                             class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <img width="15px" height="15px" src="./assets/images/sleep.svg" alt="bedroom icon" />
-                            Matrass
+                            <x-heroicon-o-computer-desktop class="w-5 h-5" />
+                            Laptops
                             <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -220,8 +220,8 @@
 
                         <li
                             class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <img width="15px" height="15px" src="./assets/images/outdoor.svg" alt="bedroom icon" />
-                            Outdoor
+                            <x-heroicon-o-device-tablet class="w-5 h-5" />
+                            Tablets
                             <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -231,8 +231,8 @@
 
                         <li
                             class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <img width="15px" height="15px" src="./assets/images/sofa.svg" alt="bedroom icon" />
-                            Sofa
+                            <x-heroicon-o-computer-desktop class="w-5 h-5" />
+                            Monitors
                             <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -242,8 +242,8 @@
 
                         <li
                             class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <img width="15px" height="15px" src="./assets/images/kitchen.svg" alt="bedroom icon" />
-                            Kitchen
+                            <x-heroicon-o-printer class="w-5 h-5" />
+                            Printers
                             <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -253,8 +253,48 @@
 
                         <li
                             class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <img width="15px" height="15px" src="./assets/images/food.svg" alt="Food icon" />
-                            Living room
+                            <x-heroicon-o-camera class="w-5 h-5" />
+                            Cameras
+                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li
+                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
+                            <x-heroicon-o-tv class="w-5 h-5" />
+                            TV's
+                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li
+                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
+                            <x-heroicon-o-clock class="w-5 h-5" />
+                            Smartwatch
+                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li
+                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
+                            <x-heroicon-o-finger-print class="w-5 h-5" />
+                            Accessories
+                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li
+                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
+                            <x-heroicon-o-gift class="w-5 h-5" />
+                            Others
                             <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -267,7 +307,7 @@
                 <div class="flex w-full justify-between">
                     <div class="flex gap-6">
                         <div class="mx-5">
-                            <p class="font-medium text-gray-500">BEDS</p>
+                            <p class="font-medium text-gray-500">Lenovo</p>
                             <ul class="text-sm leading-8">
                                 <li><a href="product-overview.html">Italian bed</a></li>
                                 <li><a href="product-overview.html">Queen-size bed</a></li>
@@ -277,7 +317,7 @@
                         </div>
 
                         <div class="mx-5">
-                            <p class="font-medium text-gray-500">LAMPS</p>
+                            <p class="font-medium text-gray-500">Vivo</p>
                             <ul class="text-sm leading-8">
                                 <li><a href="product-overview.html">Italian Purple Lamp</a></li>
                                 <li><a href="product-overview.html">APEX Lamp</a></li>
@@ -287,7 +327,7 @@
                         </div>
 
                         <div class="mx-5">
-                            <p class="font-medium text-gray-500">BEDSIDE TABLES</p>
+                            <p class="font-medium text-gray-500">Infinix</p>
                             <ul class="text-sm leading-8">
                                 <li><a href="product-overview.html">Purple Table</a></li>
                                 <li><a href="product-overview.html">Easy Bedside</a></li>
@@ -297,7 +337,7 @@
                         </div>
 
                         <div class="mx-5">
-                            <p class="font-medium text-gray-500">SPECIAL</p>
+                            <p class="font-medium text-gray-500">Poco</p>
                             <ul class="text-sm leading-8">
                                 <li><a href="product-overview.html">Humidifier</a></li>
                                 <li><a href="product-overview.html">Bed Cleaner</a></li>
