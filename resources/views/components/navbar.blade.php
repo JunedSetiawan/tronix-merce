@@ -206,7 +206,6 @@
                                 </svg>
                             </span>
                         </li>
-
                         <li
                             class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
                             <x-heroicon-o-computer-desktop class="w-5 h-5" />
@@ -303,50 +302,17 @@
                         </li>
                     </ul>
                 </div>
+                {{-- <x-mega-menu-sub-content /> --}}
+                <x-splade-toggle data="isLaptops, isPhone">
+                    <button @click.prevent="toggle('isLaptops'), setToggle('isPhone', false)">Laptops</button>
+                    <div v-show="isLaptops">laptop</div>
 
-                <div class="flex w-full justify-between">
-                    <div class="flex gap-6">
-                        <div class="mx-5">
-                            <p class="font-medium text-gray-500">Lenovo</p>
-                            <ul class="text-sm leading-8">
-                                <li><a href="product-overview.html">Italian bed</a></li>
-                                <li><a href="product-overview.html">Queen-size bed</a></li>
-                                <li><a href="product-overview.html">Wooden craft bed</a></li>
-                                <li><a href="product-overview.html">King-size bed</a></li>
-                            </ul>
-                        </div>
+                    <button @click.prevent="toggle('isPhone'), setToggle('isLaptops', false)">Phone</button>
+                    <div v-show="isPhone">smartphone</div>
+                </x-splade-toggle>
 
-                        <div class="mx-5">
-                            <p class="font-medium text-gray-500">Vivo</p>
-                            <ul class="text-sm leading-8">
-                                <li><a href="product-overview.html">Italian Purple Lamp</a></li>
-                                <li><a href="product-overview.html">APEX Lamp</a></li>
-                                <li><a href="product-overview.html">PIXAR lamp</a></li>
-                                <li><a href="product-overview.html">Ambient Nightlamp</a></li>
-                            </ul>
-                        </div>
 
-                        <div class="mx-5">
-                            <p class="font-medium text-gray-500">Infinix</p>
-                            <ul class="text-sm leading-8">
-                                <li><a href="product-overview.html">Purple Table</a></li>
-                                <li><a href="product-overview.html">Easy Bedside</a></li>
-                                <li><a href="product-overview.html">Soft Table</a></li>
-                                <li><a href="product-overview.html">Craft Table</a></li>
-                            </ul>
-                        </div>
 
-                        <div class="mx-5">
-                            <p class="font-medium text-gray-500">Poco</p>
-                            <ul class="text-sm leading-8">
-                                <li><a href="product-overview.html">Humidifier</a></li>
-                                <li><a href="product-overview.html">Bed Cleaner</a></li>
-                                <li><a href="product-overview.html">Vacuum Cleaner</a></li>
-                                <li><a href="product-overview.html">Pillow</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
