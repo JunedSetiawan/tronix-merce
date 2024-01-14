@@ -303,12 +303,15 @@
                     </ul>
                 </div>
                 {{-- <x-mega-menu-sub-content /> --}}
-                <x-splade-toggle data="isLaptops, isPhone">
-                    <button @click.prevent="toggle('isLaptops'), setToggle('isPhone', false)">Laptops</button>
+                <x-splade-toggle data="isLaptops, isPhone, isTablets">
+                    <button @click.prevent="toggle('isLaptops'), setToggle('isPhone,isTablets', false)">Laptops</button>
                     <div v-show="isLaptops">laptop</div>
 
-                    <button @click.prevent="toggle('isPhone'), setToggle('isLaptops', false)">Phone</button>
+                    <button @click.prevent="toggle('isPhone'), setToggle('isLaptops,isTablets', false)">Phone</button>
                     <div v-show="isPhone">smartphone</div>
+
+                    <button @click.prevent="toggle('isTablets'), setToggle('isLaptops,isPhone', false)">Tablets</button>
+                    <div v-show="isPhone">tablets</div>
                 </x-splade-toggle>
 
 
