@@ -193,132 +193,70 @@
         </nav>
 
         <!-- Menu  -->
-        <section v-if="desktopMenuOpen" class="absolute left-0 right-0 z-10 w-full border-b border-r border-l bg-white">
-            <div class="mx-auto flex max-w-[1200px] py-10">
-                <div class="w-[300px] border-r">
-                    <ul class="px-5">
-                        <li class="active:blue-900 flex items-center gap-2 bg-amber-400 py-2 px-3 active:bg-amber-400">
-                            <x-heroicon-o-device-phone-mobile class="w-5 h-5" />
-                            SmartPhone
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
-                        <li
-                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <x-heroicon-o-computer-desktop class="w-5 h-5" />
-                            Laptops
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
 
-                        <li
-                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <x-heroicon-o-device-tablet class="w-5 h-5" />
-                            Tablets
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
-
-                        <li
-                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <x-heroicon-o-computer-desktop class="w-5 h-5" />
-                            Monitors
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
-
-                        <li
-                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <x-heroicon-o-printer class="w-5 h-5" />
-                            Printers
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
-
-                        <li
-                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <x-heroicon-o-camera class="w-5 h-5" />
-                            Cameras
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
-                        <li
-                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <x-heroicon-o-tv class="w-5 h-5" />
-                            TV's
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
-                        <li
-                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <x-heroicon-o-clock class="w-5 h-5" />
-                            Smartwatch
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
-                        <li
-                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <x-heroicon-o-finger-print class="w-5 h-5" />
-                            Accessories
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
-                        <li
-                            class="active:blue-900 flex items-center gap-2 py-2 px-3 hover:bg-neutral-100 active:bg-amber-400">
-                            <x-heroicon-o-gift class="w-5 h-5" />
-                            Others
-                            <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </span>
-                        </li>
-                    </ul>
+        <x-splade-toggle
+            data="isLaptops, isPhone, isTablets, isMonitors, isPrinters, isCameras, isTv, isSmartwatch, isAccessories, isOthers">
+            <section v-if="desktopMenuOpen"
+                class="absolute left-0 right-0 z-10 w-full border-b border-r border-l bg-white">
+                <div class="mx-auto flex max-w-[1200px] py-10">
+                    <div class="w-[300px] border-r">
+                        <ul class="px-5">
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isPhone',true), setToggle('isLaptops', false), setToggle('isTablets', false), setToggle('isMonitors', false), setToggle('isPrinters', false), setToggle('isCameras', false), setToggle('isTv', false), setToggle('isSmartwatch', false), setToggle('isAccessories', false), setToggle('isOthers', false)">
+                                <x-heroicon-o-device-phone-mobile class="w-5 h-5" />
+                                SmartPhone
+                            </x-mega-menu-content>
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isLaptops',true), setToggle('isPhone', false), setToggle('isTablets', false), setToggle('isMonitors', false), setToggle('isPrinters', false), setToggle('isCameras', false), setToggle('isTv', false), setToggle('isSmartwatch', false), setToggle('isAccessories', false), setToggle('isOthers', false)">
+                                <x-heroicon-o-computer-desktop class="w-5 h-5" />
+                                Laptops
+                            </x-mega-menu-content>
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isTablets',true), setToggle('isLaptops', false), setToggle('isPhone', false), setToggle('isMonitors', false), setToggle('isPrinters', false), setToggle('isCameras', false), setToggle('isTv', false), setToggle('isSmartwatch', false), setToggle('isAccessories', false), setToggle('isOthers', false)">
+                                <x-heroicon-o-device-tablet class="w-5 h-5" />
+                                Tablets
+                            </x-mega-menu-content>
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isMonitors',true), setToggle('isLaptops', false), setToggle('isTablets', false), setToggle('isPhone', false), setToggle('isPrinters', false), setToggle('isCameras', false), setToggle('isTv', false), setToggle('isSmartwatch', false), setToggle('isAccessories', false), setToggle('isOthers', false)">
+                                <x-heroicon-o-computer-desktop class="w-5 h-5" />
+                                Monitors
+                            </x-mega-menu-content>
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isPrinters',true), setToggle('isLaptops', false), setToggle('isTablets', false), setToggle('isMonitors', false), setToggle('isPhone', false), setToggle('isCameras', false), setToggle('isTv', false), setToggle('isSmartwatch', false), setToggle('isAccessories', false), setToggle('isOthers', false)">
+                                <x-heroicon-o-printer class="w-5 h-5" />
+                                Printers
+                            </x-mega-menu-content>
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isCameras',true), setToggle('isLaptops', false), setToggle('isTablets', false), setToggle('isMonitors', false), setToggle('isPrinters', false), setToggle('isPhone', false), setToggle('isTv', false), setToggle('isSmartwatch', false), setToggle('isAccessories', false), setToggle('isOthers', false)">
+                                <x-heroicon-o-camera class="w-5 h-5" />
+                                Cameras
+                            </x-mega-menu-content>
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isTv',true), setToggle('isLaptops', false), setToggle('isTablets', false), setToggle('isMonitors', false), setToggle('isPrinters', false), setToggle('isCameras', false), setToggle('isPhone', false), setToggle('isSmartwatch', false), setToggle('isAccessories', false), setToggle('isOthers', false)">
+                                <x-heroicon-o-tv class="w-5 h-5" />
+                                TV's
+                            </x-mega-menu-content>
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isSmartwatch',true), setToggle('isLaptops', false), setToggle('isTablets', false), setToggle('isMonitors', false), setToggle('isPrinters', false), setToggle('isCameras', false), setToggle('isTv', false), setToggle('isPhone', false), setToggle('isAccessories', false), setToggle('isOthers', false)">
+                                <x-heroicon-o-clock class="w-5 h-5" />
+                                Smartwatch
+                            </x-mega-menu-content>
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isAccessories',true), setToggle('isLaptops', false), setToggle('isTablets', false), setToggle('isMonitors', false), setToggle('isPrinters', false), setToggle('isCameras', false), setToggle('isTv', false), setToggle('isSmartwatch', false), setToggle('isPhone', false), setToggle('isOthers', false)">
+                                <x-heroicon-o-finger-print class="w-5 h-5" />
+                                Accessories
+                            </x-mega-menu-content>
+                            <x-mega-menu-content
+                                @click.prevent="setToggle('isOthers',true), setToggle('isLaptops', false), setToggle('isTablets', false), setToggle('isMonitors', false), setToggle('isPrinters', false), setToggle('isCameras', false), setToggle('isTv', false), setToggle('isSmartwatch', false), setToggle('isPhone', false), setToggle('isAccessories', false)">
+                                <x-heroicon-o-gift class="w-5 h-5" />
+                                Others
+                            </x-mega-menu-content>
+                        </ul>
+                    </div>
+                    <x-mega-menu-sub-content />
                 </div>
-                {{-- <x-mega-menu-sub-content /> --}}
-                <x-splade-toggle data="isLaptops, isPhone, isTablets">
-                    <button @click.prevent="toggle('isLaptops'), setToggle('isPhone,isTablets', false)">Laptops</button>
-                    <div v-show="isLaptops">laptop</div>
-
-                    <button @click.prevent="toggle('isPhone'), setToggle('isLaptops,isTablets', false)">Phone</button>
-                    <div v-show="isPhone">smartphone</div>
-
-                    <button @click.prevent="toggle('isTablets'), setToggle('isLaptops,isPhone', false)">Tablets</button>
-                    <div v-show="isPhone">tablets</div>
-                </x-splade-toggle>
-
-
-
-            </div>
-        </section>
-
+            </section>
+        </x-splade-toggle>
         <!-- /Menu  -->
         <!-- /Nav bar -->
     </x-splade-toggle>
