@@ -7,6 +7,7 @@
     },
     "devDependencies": {
         "@protonemedia/laravel-splade": "^1.4.8",
+        "@splidejs/splide": "^4.1.4",
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/typography": "^0.5.2",
         "@vitejs/plugin-vue": "^4.0.0",

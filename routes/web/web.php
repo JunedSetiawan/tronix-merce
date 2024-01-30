@@ -40,5 +40,6 @@ Route::middleware('splade')->group(function () {
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 
+    Route::get('/image/{filename}', [App\Http\Controllers\Web\ImageController::class, 'getImage'])->name('image.get');
     require __DIR__ . '/auth.php';
 });
