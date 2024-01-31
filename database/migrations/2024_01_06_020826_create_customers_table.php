@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_addresses', function (Blueprint $table) {
+        Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')
                 ->onDelete('cascade'); // cascade means if user is deleted, delete all his addresses (user addresses
+            $table->foreignId('province_id')->references('id')->on('provinces')
+                ->cascadeOnDelete(); // cascade means if province is deleted, delete all its cities (cities
+            $table->foreignId('city_id')->references('id')->on('cities')->cascadeOnDelete();
             $table->string('address');
-            $table->string('country');
-            $table->string('city');
-            $table->string('street');
             $table->timestamps();
         });
     }

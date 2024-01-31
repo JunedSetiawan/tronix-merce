@@ -20,7 +20,6 @@ class ProductSeeder extends Seeder
         $products = [
             [
                 'name' => 'Samsung Galaxy S21 Ultra 5G',
-
                 'description' => 'Samsung Galaxy S21 Ultra 5G Android smartphone. Announced Jan 2021. Features 6.8″ display, Exynos 2100 chipset, 5000 mAh battery, 512 GB storage, 16 GB RAM, Corning Gorilla Glass Victus.',
                 'price' => 1199.99,
                 'category_id' => 1,
@@ -92,21 +91,21 @@ class ProductSeeder extends Seeder
                 'name' => 'Canon PIXMA TS3320',
                 'description' => 'Canon PIXMA TS3320 Wireless Inkjet All-in-One Printer, White, Works with Alexa',
                 'price' => 79.99,
-                'category_id' => 6,
+                'category_id' => 5,
                 'brand_id' => 3,
             ],
             [
                 'name' => 'Canon PIXMA TR4520',
                 'description' => 'Canon PIXMA TR4520 Wireless All in One Photo Printer with Mobile Printing, Black, Works with Alexa',
                 'price' => 99.99,
-                'category_id' => 6,
+                'category_id' => 5,
                 'brand_id' => 3,
             ],
             [
                 'name' => 'Canon PIXMA TR150',
                 'description' => 'Canon PIXMA TR150 Wireless Mobile Printer With Airprint And Cloud Compatible, Black',
                 'price' => 199.99,
-                'category_id' => 6,
+                'category_id' => 5,
                 'brand_id' => 3,
             ],
             // products for cameras 3 only with category_id 11
@@ -114,21 +113,21 @@ class ProductSeeder extends Seeder
                 'name' => 'Canon EOS R5',
                 'description' => 'Canon EOS R5 Full-Frame Mirrorless Camera with 8K Video, 45 Megapixel Full-Frame CMOS Sensor, DIGIC X Image Processor, Dual Memory Card Slots, and Up to 12 fps Mechnical Shutter, Body Only',
                 'price' => 3899.99,
-                'category_id' => 11,
+                'category_id' => 6,
                 'brand_id' => 3,
             ],
             [
                 'name' => 'Canon EOS R6',
                 'description' => 'Canon EOS R6 Full-Frame Mirrorless Camera with 4K Video, Full-Frame CMOS Senor, DIGIC X Image Processor, Dual UHS-II SD Memory Card Slots, and Up to 12 fps with Mechnical Shutter, Body Only',
                 'price' => 2499.99,
-                'category_id' => 11,
+                'category_id' => 6,
                 'brand_id' => 3,
             ],
             [
                 'name' => 'Canon EOS M50 Mark II',
                 'description' => 'Canon EOS M50 Mark II + EF-M 15-45mm is STM Kit Black',
                 'price' => 599.99,
-                'category_id' => 11,
+                'category_id' => 6,
                 'brand_id' => 3,
             ],
         ];

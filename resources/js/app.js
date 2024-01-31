@@ -14,7 +14,20 @@ import { renderSpladeApp, SpladePlugin } from "@protonemedia/laravel-splade";
 
 const el = document.getElementById("app");
 
-if (document.querySelector('.splide')) {
+
+
+createApp({
+    render: renderSpladeApp({ el }),
+})
+    .use(SpladePlugin, {
+        max_keep_alive: 10,
+        transform_anchors: true,
+        progress_bar: true,
+    })
+    .component("theme-toggle", ThemeToggle)
+    .mount(el);
+
+    if (document.querySelector('.splide')) {
   let splide = new Splide(".splide", {
     type: "loop",
     focus: 0,
@@ -32,14 +45,3 @@ if (document.querySelector('.splide')) {
 
   splide.mount();
 }
-
-createApp({
-    render: renderSpladeApp({ el }),
-})
-    .use(SpladePlugin, {
-        max_keep_alive: 10,
-        transform_anchors: true,
-        progress_bar: true,
-    })
-    .component("theme-toggle", ThemeToggle)
-    .mount(el);
