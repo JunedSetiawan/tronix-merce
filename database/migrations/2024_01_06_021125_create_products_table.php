@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('description');
             $table->unsignedBigInteger('price');
             $table->unsignedBigInteger('stock');
+            $table->unsignedBigInteger('weight');
             $table->string('image');
             $table->boolean('is_featured')->default(false);
             $table->date('production_date')->nullable();

@@ -19,7 +19,7 @@
     <x-splade-toggle data="mobileMenuOpen,desktopMenuOpen">
         <!-- Header -->
         <header class="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5">
-            <a href="index.html">
+            <a href="{{ route('home') }}">
                 <h1 class="font-mono text-3xl font-bold">Tech Tronix</h1>
             </a>
 
@@ -142,7 +142,7 @@
                     </button>
                 </form>
                 <ul class="text-center font-medium">
-                    <li class="py-2"><a href="index.html">Home</a></li>
+                    <li class="py-2"><a href="{{ route('home') }}">Home</a></li>
                     <li class="py-2"><a href="catalog.html">Catalog</a></li>
                     <li class="py-2"><a href="about-us.html">About Us</a></li>
                     <li class="py-2"><a href="contact-us.html">Contact Us</a></li>
@@ -171,7 +171,7 @@
 
                 <div class="mx-7 flex gap-8">
                     <a class="font-light text-white duration-100 hover:text-yellow-400 hover:underline"
-                        href="index.html">Home</a>
+                        href="{{ route('home') }}">Home</a>
                     <a class="font-light text-white duration-100 hover:text-yellow-400 hover:underline"
                         href="catalog.html">Catalog</a>
                     <a class="font-light text-white duration-100 hover:text-yellow-400 hover:underline"
@@ -182,7 +182,7 @@
 
                 <div class="ml-auto flex gap-4 px-5">
                     <a class="font-light text-white duration-100 hover:text-yellow-400 hover:underline"
-                        href="login.html">Login</a>
+                        href="{{ route('login') }}">Login</a>
 
                     <span class="text-white">&#124;</span>
 

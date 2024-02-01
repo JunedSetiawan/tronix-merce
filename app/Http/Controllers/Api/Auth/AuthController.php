@@ -6,6 +6,7 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\RegisterRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -17,14 +18,9 @@ class AuthController extends Controller
     /*
 	 * Register new user
 	*/
-    public function signup(Request $request)
+    public function signup(RegisterRequest $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6|confirmed',
-        ]);
-
+        $validatedData = $request->validated();
         $validatedData['password'] = Hash::make($validatedData['password']);
 
         if (User::create($validatedData)) {
