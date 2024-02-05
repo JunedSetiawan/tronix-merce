@@ -30,14 +30,13 @@ Route::middleware('splade')->group(function () {
 
     Route::get('/', [App\Http\Controllers\Web\HomeController::class, 'index'])->name('home');
 
-    Route::middleware('auth')->group(function () {
+    Route::name('backdash.')->middleware('auth')->group(function () {
+        Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
         Route::get('/dashboard', function () {
             return view('dashboard');
         })->middleware(['verified'])->name('dashboard');
-
-        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 
     Route::get('/image/{filename}', [App\Http\Controllers\Web\ImageController::class, 'getImage'])->name('image.get');

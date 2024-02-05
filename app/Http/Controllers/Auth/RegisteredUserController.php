@@ -33,7 +33,6 @@ class RegisteredUserController extends Controller
      */
     public function store(RegisterRequest $request)
     {
-
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -42,10 +41,11 @@ class RegisteredUserController extends Controller
 
         $user->assignRole('customer');
 
-        event(new Registered($user));
+        if (!$user->email_verified_at) {
+            event(new Registered($user));
 
-        Auth::login($user);
-
-        return redirect(RouteServiceProvider::HOME);
+            Auth::login($user);
+            return redirect()->route('verification.notice');
+        }
     }
 }

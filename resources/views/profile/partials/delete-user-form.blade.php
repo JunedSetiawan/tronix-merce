@@ -9,14 +9,10 @@
         </p>
     </header>
 
-     <x-splade-form
-        method="delete"
-        :action="route('profile.destroy')"
-        :confirm="__('Are you sure you want to delete your account?')"
-        :confirm-text="__('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.')"
-        :confirm-button="__('Delete Account')"
-        require-password
-    >
+    <x-splade-form method="delete" :action="route('backdash.profile.destroy')" :confirm="__('Are you sure you want to delete your account?')" :confirm-text="__(
+        'Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.',
+    )" :confirm-button="__('Delete Account')"
+        require-password>
         <x-splade-submit danger :label="__('Delete Account')" />
     </x-splade-form>
 </section>

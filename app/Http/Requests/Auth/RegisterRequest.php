@@ -27,9 +27,6 @@ class RegisterRequest extends FormRequest
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'province_id' => ['required', 'exists:provinces,id', 'integer'],
-            'city_id' => ['required', 'exists:cities,id', 'integer'],
-            'address' => ['required', 'string', 'max:255'],
         ];
     }
 }

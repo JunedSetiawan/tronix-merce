@@ -24,7 +24,7 @@ class SidebarContent
                 'menus' => [
                     [
                         'title' => 'Dashboard',
-                        'route' => 'dashboard',
+                        'route' => 'backdash.dashboard',
                         'icon' => @svg('heroicon-o-home'),
                         'menus' => [],
                     ],

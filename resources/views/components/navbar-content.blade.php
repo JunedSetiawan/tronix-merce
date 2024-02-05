@@ -30,7 +30,7 @@
                 <span class="badge">{{ Auth::user()->name }}</span>
                 <div class="badge badge-primary badge-outline">{{ Auth::user()->email }}</div>
                 <li class="my-4">
-                    <Link href="{{ route('profile.edit') }}" class="justify-between">
+                    <Link href="{{ route('backdash.profile.edit') }}" class="justify-between">
                     Profile
                     </Link>
                 </li>

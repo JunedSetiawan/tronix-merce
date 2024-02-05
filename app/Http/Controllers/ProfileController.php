@@ -39,7 +39,7 @@ class ProfileController extends Controller
 
         Toast::title('saved')->autoDismiss(5);
 
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        return Redirect::route('backdash.profile.edit')->with('status', 'profile-updated');
     }
 
     /**
