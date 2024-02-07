@@ -4,8 +4,11 @@ namespace App\Services;
 
 class UserService
 {
-    public function index()
+    public function store()
     {
-        //
+        try {
+        } catch (\Exception $e) {
+            return '';
+        };
     }
 }
