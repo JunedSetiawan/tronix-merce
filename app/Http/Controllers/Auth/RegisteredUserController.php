@@ -2,18 +2,26 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\DataTransferObject\UserDto;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use App\Services\User\UserService;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use ProtoneMedia\Splade\Facades\Toast;
 
 class RegisteredUserController extends Controller
 {
+    public function __construct(
+        protected UserService $userService
+    ) {
+    }
+
     /**
      * Display the registration view.
      *
@@ -33,19 +41,12 @@ class RegisteredUserController extends Controller
      */
     public function store(RegisterRequest $request)
     {
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        $user = $this->userService->register(
+            UserDto::register($request)
+        );
 
-        $user->assignRole('customer');
-
-        if (!$user->email_verified_at) {
-            event(new Registered($user));
-
-            Auth::login($user);
-            return redirect()->route('verification.notice');
-        }
+        Auth::login($user);
+        Toast::info('Please Verify your email address!');
+        return redirect()->route('verification.notice');
     }
 }

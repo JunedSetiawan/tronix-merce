@@ -2,29 +2,37 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
+use App\DataTransferObject\UserDto;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Resources\Api\UserResource;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\User;
+use App\Services\User\UserService;
 
 class AuthController extends Controller
 {
+    public function __construct(
+        protected UserService $userService
+    ) {
+    }
 
     /*
 	 * Register new user
 	*/
     public function signup(RegisterRequest $request)
     {
-        $validatedData = $request->validated();
-        $validatedData['password'] = Hash::make($validatedData['password']);
+        $user = $this->userService->register(
+            UserDto::register($request)
+        );
 
-        if (User::create($validatedData)) {
-            return response()->json(null, 201);
+        if ($user) {
+            return UserResource::make($user);
         }
 
         return response()->json(null, 404);
