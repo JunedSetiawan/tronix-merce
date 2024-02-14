@@ -21,6 +21,7 @@
         "spatie/laravel-permission": "^6.3"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.10",
         "fakerphp/faker": "^1.9.1",
         "jn-jairo/laravel-ngrok": "^3.0",
         "laravel/dusk": "^7.7",

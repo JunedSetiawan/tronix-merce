@@ -19,9 +19,9 @@ class UserService
 
         $user->assignRole('customer');
 
-        if (!$user->email_verified_at) {
-            event(new Registered($user));
-        }
+        // if (!$user->email_verified_at) {
+        //     event(new Registered($user));
+        // }
 
         return $user;
     }

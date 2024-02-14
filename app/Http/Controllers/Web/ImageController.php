@@ -28,4 +28,12 @@ class ImageController extends Controller
         // $response->header('Content-Type', $type);
         // return $response;
     }
+
+    // public function testHelperUploadFile(Request $request)
+    // {
+    //     $file = $request->file('file');
+    //     $folder = 'images';
+    //     $file_path = $this->uploadFile($file, $folder);
+    //     return $file_path;
+    // }
 }

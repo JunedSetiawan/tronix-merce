@@ -44,7 +44,9 @@ class RegisteredUserController extends Controller
         $user = $this->userService->register(
             UserDto::register($request)
         );
-
+        if (!$user->email_verified_at) {
+            event(new Registered($user));
+        }
         Auth::login($user);
         Toast::info('Please Verify your email address!');
         return redirect()->route('verification.notice');

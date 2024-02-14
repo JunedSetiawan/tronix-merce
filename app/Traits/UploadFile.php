@@ -9,7 +9,7 @@ trait UploadFile
     /**
      * Upload file to storage
      */
-    public function uploadFile(\Illuminate\Http\UploadedFile $file, string $folder = 'unknown'): string|bool
+    public function uploadFile(\Illuminate\Http\UploadedFile $file, string $folder = ''): string|bool
     {
         return $file->store($folder, 'public');
     }

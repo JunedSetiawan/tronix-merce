@@ -81,6 +81,15 @@
 
                         <p class="text-xs">Account</p>
                     </a>
+
+                    @can('view-dashboard')
+                        <a href="{{ route('backdash.dashboard') }}"
+                            class="flex cursor-pointer flex-col items-center justify-center">
+                            <x-heroicon-o-squares-2x2 />
+
+                            <p class="text-xs">Cart</p>
+                        </a>
+                    @endcan
                 </div>
             @endauth
         </header>
