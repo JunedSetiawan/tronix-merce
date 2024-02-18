@@ -40,5 +40,7 @@ Route::middleware('splade')->group(function () {
     });
 
     Route::get('/image/{filename}', [App\Http\Controllers\Web\ImageController::class, 'getImage'])->name('image.get');
+
     require __DIR__ . '/auth.php';
+    require __DIR__ . '/customer.php';
 });

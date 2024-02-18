@@ -10,7 +10,8 @@
 
             {{ $slot }}
         </div>
-
-        <x-sidebar />
+        @if (!Request::routeIs('customer.*'))
+            <x-sidebar />
+        @endif
     </div>
 </x-splade-toggle>

@@ -66,28 +66,29 @@
                         <p class="text-xs">Cart</p>
                     </a>
 
-                    <a href="account-page.html" class="relative flex cursor-pointer flex-col items-center justify-center">
-                        <span class="absolute bottom-[33px] right-1 flex h-2 w-2">
-                            <span
-                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
-                            <span class="relative inline-flex h-2 w-2 rounded-full bg-red-500"></span>
-                        </span>
+                    <Link href="{{ route('customer.index') }}"
+                        class="relative flex cursor-pointer flex-col items-center justify-center">
+                    <span class="absolute bottom-[33px] right-1 flex h-2 w-2">
+                        <span
+                            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex h-2 w-2 rounded-full bg-red-500"></span>
+                    </span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="h-6 w-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                        </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
 
-                        <p class="text-xs">Account</p>
-                    </a>
+                    <p class="text-xs">Account</p>
+                    </Link>
 
                     @can('view-dashboard')
                         <a href="{{ route('backdash.dashboard') }}"
                             class="flex cursor-pointer flex-col items-center justify-center">
                             <x-heroicon-o-squares-2x2 />
 
-                            <p class="text-xs">Cart</p>
+                            <p class="text-xs">Dashboard</p>
                         </a>
                     @endcan
                 </div>

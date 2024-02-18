@@ -33,7 +33,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         if ($request->user()->customer === null) {
-            Toast::warning('Please complete your profile in Account menu!');
+            Toast::warning('Please complete your profile in Account menu!')->leftTop();
         };
 
         return redirect()->intended(RouteServiceProvider::HOME);

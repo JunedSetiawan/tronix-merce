@@ -19,6 +19,8 @@ return new class extends Migration
                 ->cascadeOnDelete(); // cascade means if province is deleted, delete all its cities (cities
             $table->foreignId('city_id')->references('id')->on('cities')->cascadeOnDelete();
             $table->string('address');
+            $table->string('phone')->nullable();
+            $table->string('avatar')->nullable();
             $table->timestamps();
         });
     }
